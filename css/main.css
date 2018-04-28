@@ -1,17 +1,40 @@
+@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans);
+@import url(https://fonts.googleapis.com/css?family=Titllium+Web);
+a {
+  text-decoration: none;
+  font-style: italic; }
+
 body {
   font-family: sans-serif;
   color: #222222; }
 
 h1, h2, h3, h4 {
-  font-family: Montserrat, sans-serif; }
+  font-family: "Titllium Web", sans-serif; }
+
+h2 {
+  font-size: 22px;
+  font-weight: bold; }
 
 p {
-  font-family: Helvetica, sans-serif; }
+  font-family: "Allegreya Sans", sans-serif; }
 
 a {
   color: #ed9334; }
 
+* html body {
+  font-size: 125%; }
+
+.warning-button {
+  background-color: green;
+  color: #fff;
+  padding: 8px 12px; }
+
 #header {
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-shadow: 2px 0px 4px #999, 1px 1px 6px #ed9334;
+  -moz-box-shadow: 2px 0px 4px #999, 1px 1px 6px #ed9334;
+  -webkit-box-shadow: 2px 0px 4px #999, 1px 1px 6px #ed9334;
   height: 60px;
   background-color: #120a3d; }
   #header #main-menu li {
