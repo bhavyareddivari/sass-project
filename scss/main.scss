@@ -1,3 +1,4 @@
+@import "partials/functions";
 @import "partials/variables";
 @import "partials/mixins";
 
@@ -9,6 +10,11 @@
 body {
   font-family: sans-serif;
   color: $text-color;
+  // font-size: em(18px);
+
+  @include large-screens {
+    font-size: 125%;
+  }
 }
 
 h1, h2, h3, h4 {
@@ -33,6 +39,14 @@ a {
   }
 }
 
+.error {
+  color: red;
+}
+.critical-error {
+  @extend .error;
+  border: 1px solid red;
+  font-weight: bold;
+}
 .warning-button {
   @include warning;
   padding: 8px 12px;
@@ -61,11 +75,26 @@ a {
 #main {
   width: $content-width;
   margin: 0 auto;
-
+  @include large-screens {
+    width: auto;
+    max-width: $content-width;
+  }
   #content {
+    // float: left;
+    // width: 6*$col;
   }
 
   #sidebar {
+    float: right;
+    width: 2*$col;
+  }
+  li {
+    list-style-type: none;
+    padding: em(16px) em(20px);
+
+    &:hover {
+      background-color: #efefef;
+    }
   }
 }
 
